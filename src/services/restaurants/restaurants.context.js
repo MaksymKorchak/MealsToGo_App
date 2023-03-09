@@ -6,7 +6,6 @@ import {
 } from "./restaurants.service";
 
 import { LocationContext } from "../location/location.context";
-
 export const RestaurantsContext = createContext();
 
 export const RestaurantsContextProvider = ({ children }) => {
