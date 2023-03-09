@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { FlatList, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
-import { ActivityIndicator } from "react-native-paper";
+import { ActivityIndicator, Colors } from "react-native-paper";
 
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
@@ -31,9 +31,9 @@ export const RestaurantsScreen = ({ navigation }) => {
 
   return (
     <SafeArea>
-      {isLoading && (
+      {!restaurants[0] && (
         <LoadingContainer>
-          <Loading size={50} animating={true} color={"#333"} />
+          <Loading size={50} animating={true} color={'#333'} />
         </LoadingContainer>
       )}
       <Search />

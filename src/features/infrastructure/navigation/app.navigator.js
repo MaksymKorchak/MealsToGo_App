@@ -5,7 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Text } from "react-native";
 
 import { RestaurantsNavigator } from "./restaurants.navigator";
-import { SafeArea } from "../../components/utility/safe-area.component";
+import { SafeArea } from "../../../components/utility/safe-area.component";
 import { MapScreen } from "../../map/screens/map.screen";
 
 const Tab = createBottomTabNavigator();
