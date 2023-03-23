@@ -3,6 +3,25 @@
     "name": "MealsToGo",
     "slug": "MealsToGo",
     "version": "1.0.0",
+    "plugins": [
+      [
+        "react-native-fbsdk-next",
+        {
+          "appID": "3511494469072195",
+          "clientToken": "c4026f81e95912c580c692640fefa8bd",
+          "displayName": "MealsToGo"
+        }
+      ],
+      "@react-native-google-signin/google-signin",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -15,16 +34,33 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "SKAdNetworkItems": [
+          {
+            "SKAdNetworkIdentifier": "v9wttpbfk9.skadnetwork"
+          },
+          {
+            "SKAdNetworkIdentifier": "n38lu8286q.skadnetwork"
+          }
+        ]
+      },
+      "bundleIdentifier": "com.admin1992.MealsToGo"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.INTERNET"
+      ],
+      "package": "com.admin1992.MealsToGo"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "extra": {
+      "eas": {
+        "projectId": "45520453-e35a-4be3-a89c-e65af98bd9eb"
+      }
     }
   }
 }
